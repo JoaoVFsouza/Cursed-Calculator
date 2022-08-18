@@ -8,10 +8,25 @@
   <title>Cursedlator</title>
 </head>
 <body>
+  <audio id="moan">
+    <source src="../Assets/Sound_assets/moan.mp3" type="audio/ogg"></source>
+  </audio>
+  <audio id="UwU">
+    <source src="https://www.myinstants.com/media/sounds/girl-uwu.mp3"></source>
+  </audio>
+  <audio id="ara-ara">
+    <source src="https://www.myinstants.com/media/sounds/ara-ara-sayonara-mp3cut.mp3" type="audio/ogg"></source>
+  </audio>
+  <audio id="fiote3">
+    <source src="https://www.myinstants.com/media/sounds/nya_ZtXOXLx.mp3" type="audio/ogg"></source>
+  </audio>
+  <audio id="yametekudasai">
+    <source src="../Assets/Sound_assets/yametekudasai.mp3" type="audio/ogg"></source>
+  </audio>
 <div class="container-fluid">
   <div class="row">
     <div class="col-12">
-      <button>
+      <button onclick="play_audio('moan')">
         7
       </button>
       <button>
@@ -20,11 +35,14 @@
       <button>
         9
       </button>
+      <button onclick="play_audio('ara-ara')">
+        +
+      </button>
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <button>
+      <button onclick="play_audio('fiote3')">
         4
       </button>
       <button>
@@ -32,6 +50,9 @@
       </button>
       <button>
         6
+      </button>
+      <button onclick="play_audio('UwU')">
+        -
       </button>
     </div>
   </div>
@@ -46,9 +67,13 @@
       <button>
         3
       </button>
+      <button onclick="play_audio('yametekudasai')">
+        =
+      </button>
     </div>
   </div>
 </div>
+<script src="../JS/scripts.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -56,3 +81,4 @@
 </html>
 
 <!-- colocar organização da forma que eu quero, colocar linhas dividindo, visor, operadores -->
+
