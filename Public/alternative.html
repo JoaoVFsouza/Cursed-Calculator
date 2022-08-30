@@ -1,34 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CursedLator</title>
+
+  <audio id="moan">
+    <source src="../Assets/Sound_assets/moan.mp3" type="audio/ogg">
+    </source>
+  </audio>
+  <audio id="UwU">
+    <source src="https://www.myinstants.com/media/sounds/girl-uwu.mp3">
+    </source>
+  </audio>
+  <audio id="ara-ara">
+    <source src="https://www.myinstants.com/media/sounds/ara-ara-sayonara-mp3cut.mp3" type="audio/ogg">
+    </source>
+  </audio>
+  <audio id="fiote3">
+    <source src="https://www.myinstants.com/media/sounds/nya_ZtXOXLx.mp3" type="audio/ogg">
+    </source>
+  </audio>
+  <audio id="yametekudasai">
+    <source src="../Assets/Sound_assets/yametekudasai.mp3" type="audio/ogg">
+    </source>
+  </audio>
+
+
 </head>
+
 <body>
-  <div class="bolinha">
+  <div class="buttons">
     <div class="row">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>-</button>
+      <button onclick="play_audio('moan')">
+        1
+      </button>
+      <button onclick="play_audio('fiote3')">
+        2
+      </button>
+      <button>
+        3
+      </button>
+      <button onclick="play_audio('UwU')">
+        -
+      </button>
     </div>
     <div class="row">
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>+</button>
+      <button>
+        4
+      </button>
+      <button>
+        5
+      </button>
+      <button>
+        6
+      </button>
+      <button>
+        +
+      </button>
     </div>
     <div class="row">
       <button>7</button>
       <button>8</button>
       <button>9</button>
-      <button>=</button>
+      <button onclick="play_audio('yametekudasai')">
+        =
+      </button>
     </div>
   </div>
 
+<script src="../JS/scripts.js"></script>
+
 </body>
+
 </html>
 
 <style>
@@ -36,16 +82,71 @@
     border: 0;
     margin: 0;
   }
+
   button {
     background-color: rgb(0, 0, 0);
     color: #FFF;
     border: 0;
     margin: 0.1rem;
     padding: 15px;
+    border-radius: 30%;
+    position: static;
+    text-align: center;
+    width: 40px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    animation-name: bolinha;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+
   }
-  .bolinha {
-    background-color: deeppink;
+
+
+  @keyframes bolinha {
+    0% {
+      background-color: blue;
+      left: 0px;
+      top: 0px;
+    }
+
+    25% {
+      background-color: chartreuse;
+      left: 200px;
+      top: 0px;
+    }
+
+    50% {
+      background-color: darkred;
+      left: 200px;
+      top: 200px;
+    }
+
+    75% {
+      background-color: khaki;
+      left: 0;
+      top: 200;
+    }
+
+    100% {
+      background-color: darkturquoise;
+      left: 0px;
+      top: 0px;
+    }
+  }
+
+  .row {
+    margin-left: 45%;
+  }
+
+
+  .buttons {
+    background-image: url("https://i.ebayimg.com/thumbs/images/g/PvkAAOSw7OZfP3le/s-l1600.jpg");
     height: 100vh;
     width: 100vw;
+    margin-left: auto;
+    margin-bottom: auto;
   }
 </style>
