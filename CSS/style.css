@@ -1,0 +1,9 @@
+body {
+  box-sizing: content-box;
+}
+
+.col-12 {
+  box-sizing: content-box;
+  border: 15px;
+  padding: 15px;
+}
